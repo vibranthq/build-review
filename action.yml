@@ -12,9 +12,24 @@ inputs:
     description: "Directory to dist"
     required: false
     default: "dist"
+  format:
+    description: "Output format"
+    required: false
+    default: "pdf"
+  theme:
+    description: "Theme for book"
+    required: false
+    default: "techbooster"
+  paperSize:
+    description: "Paper size for the book"
+    required: false
+    default: "A4"
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.build }}
     - ${{ inputs.dist }}
+    - ${{ inputs.format }}
+    - ${{ inputs.theme }}
+    - ${{ inputs.paperSize }}
