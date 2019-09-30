@@ -11,6 +11,9 @@ opinionated-review pdf
 mkdir -p "${DIST_DIR}"
 cp /out/* "${DIST_DIR}"
 pwd
-ls "${DIST_DIR}"
+ls -al /in
+ls -al /out
+ls -al
+ls -al "${DIST_DIR}"
 
 # echo ::set-output name=outputPath::/out/*.pdf
