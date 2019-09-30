@@ -23,7 +23,7 @@ inputs:
   paperSize:
     description: "Paper size for the book"
     required: false
-    default: "A4"
+    default: "A5"
 runs:
   using: "docker"
   image: "Dockerfile"

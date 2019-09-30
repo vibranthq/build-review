@@ -6,11 +6,11 @@ This action build Re:VIEW files and create the artifact with respective format.
 
 ### `build`
 
-**Optional** Directory contains `.re` files. default to `articles`.
+**Optional** Directory contains `.re` files and corresponding config files. default to `articles`.
 
 ### `dist`
 
-**Optional** Directory where geenrated artifacts goes. default to `dist`.
+**Optional** Directory where generated artifacts goes to. default to `dist`.
 
 ### `format`
 
@@ -22,7 +22,7 @@ This action build Re:VIEW files and create the artifact with respective format.
 
 ### `paperSize`
 
-**Optional** Output paper size. default to `A4`.
+**Optional** Output paper size. default to `A5`.
 
 ## Usage
 
@@ -56,7 +56,7 @@ jobs:
           format: epub
           paperSize: B5
           build: ./src/articles
-          theme: ./src/theme
+          theme: ./src/styles
           dist: ./generated
       - uses: actions/upload-artifact@master
         with:
