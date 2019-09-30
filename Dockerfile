@@ -1,4 +1,4 @@
-FROM vibranthq/opinionated-review as runtime
+FROM vibranthq/opinionated-review:latest as runtime
 
 LABEL "repository"="https://github.com/vibranthq/build-review"
 LABEL "maintainer"="Yasuaki Uechi"
