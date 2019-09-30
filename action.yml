@@ -1,16 +1,23 @@
 # action.yml
 name: "Build Re:VIEW"
 description: "Build Re:VIEW files and create the artifact with respective format."
+icon: "anchor"
+color: "blue"
 inputs:
-  inputDirectory:
+  inputDir:
     description: "Directory to build"
     required: false
     default: "articles"
+  distDir:
+    description: "Directory to dist"
+    required: false
+    default: "dist"
 outputs:
-  outputPath:
-    description: "The output filepath"
+  distDir:
+    description: "The output dir"
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.inputDirectory }}
+    - ${{ inputs.distDir }}
