@@ -15,8 +15,36 @@ This action build Re:VIEW files and create the artifact with respective format.
 ## Usage
 
 ```yaml
-uses: vibranthq/build-review@master
-with:
-  build: 'articles'
-  dist: 'dist'
+name: Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: vibranthq/build-review@master
+      - uses: actions/upload-artifact@master
+        with:
+          name: Artifacts
+          path: ./dist
+```
+
+run with fine-grained settings:
+
+```yaml
+name: Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: vibranthq/build-review@master
+        with:
+          build: ./src/articles
+          dist: ./generated
+      - uses: actions/upload-artifact@master
+        with:
+          name: artifact
+          path: ./generated
 ```
