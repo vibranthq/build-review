@@ -1,4 +1,4 @@
-FROM uetchy/opinionated-review
+FROM vibranthq/opinionated-review
 
 LABEL "com.github.actions.name"="Build Re:VIEW files"
 LABEL "com.github.actions.description"="Build Re:VIEW files and create the artifact with respective format"
