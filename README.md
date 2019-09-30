@@ -35,8 +35,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: vibranthq/build-review@master
+      - uses: actions/checkout@v1
+      - uses: vibranthq/build-review@v1
       - uses: actions/upload-artifact@master
         with:
           name: Artifacts
@@ -52,8 +52,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: vibranthq/build-review@master
+      - uses: actions/checkout@v1
+      - uses: vibranthq/build-review@v1
         with:
           format: epub
           paperSize: B5
