@@ -17,8 +17,6 @@ echo "Paper Size: ${PAPER_SIZE}"
 # copy articles
 cp -r "${BUILD_DIR}" /in
 
-ls -al $THEME
-
 opinionated-review ${FORMAT} --theme="${THEME}" --paperSize="${PAPER_SIZE}"
 
 # push back artifacts
