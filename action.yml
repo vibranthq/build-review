@@ -1,8 +1,9 @@
 # action.yml
 name: "Build Re:VIEW"
 description: "Build Re:VIEW files and create the artifact with respective format."
-icon: "book-open"
-color: "red"
+branding:
+  icon: "book-open"
+  color: "red"
 inputs:
   build:
     description: "Directory to build"
