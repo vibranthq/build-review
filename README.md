@@ -1,6 +1,8 @@
 # Build Re:VIEW GitHub Action
 
-This action build Re:VIEW files and create the artifact with respective format.
+[View in GitHub Marketplace](https://github.com/marketplace/actions/build-re-view)
+
+This action build Re:VIEW files using [opinionated-review](https://github.com/vibranthq/opinionated-review) and create the artifact with respective format.
 
 ## Inputs
 
