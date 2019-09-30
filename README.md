@@ -4,11 +4,11 @@ This action build Re:VIEW files and create the artifact with respective format.
 
 ## Inputs
 
-### `inputDir`
+### `build`
 
 **Optional** Directory contains `.re` files. default to `articles`.
 
-### `distDir`
+### `dist`
 
 **Optional** Directory where geenrated artifacts goes. default to `dist`.
 
@@ -17,6 +17,6 @@ This action build Re:VIEW files and create the artifact with respective format.
 ```yaml
 uses: vibranthq/build-review@master
 with:
-  inputDir: 'articles'
-  distDir: 'dist'
+  build: 'articles'
+  dist: 'dist'
 ```

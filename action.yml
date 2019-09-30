@@ -4,20 +4,17 @@ description: "Build Re:VIEW files and create the artifact with respective format
 icon: "anchor"
 color: "blue"
 inputs:
-  inputDir:
+  build:
     description: "Directory to build"
     required: false
     default: "articles"
-  distDir:
+  dist:
     description: "Directory to dist"
     required: false
     default: "dist"
-outputs:
-  distDir:
-    description: "The output dir"
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.inputDir }}
-    - ${{ inputs.distDir }}
+    - ${{ inputs.build }}
+    - ${{ inputs.dist }}
